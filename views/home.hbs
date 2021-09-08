@@ -1,0 +1,75 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <header>
+          <nav class="navbar  navbar-dark bg-dark navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+      
+    
+     <button class="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">{{name}}</button>
+      <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/logout">Log out</a>
+    
+  </div>
+</nav>
+      </header>
+     <section>
+       <div class="container pt-5" > 
+        <div class="row "> 
+          {{#each cards}}
+          <div class="col-12 col-sm-4 col-md-3 ml-5">
+           <div class="card" style="width: 18rem ;height:98%">
+             <img class="card-img-top" style="width: 100%;" src="{{this.image}}" alt="Card image cap">
+             <div class="card-body">
+               <h5>{{this.category}}</h5>
+              <p class="card-text">{{this.description}}</p>
+             </div>
+          </div>
+        </div>
+           {{/each}}
+       </div>
+       <div class="row mt-4"> 
+          {{#each cards}}
+          <div class="col-12 col-sm-4 col-md-3 ml-5">
+           <div class="card" style="width: 18rem ;height:98%">
+             <img class="card-img-top" style="width: 100%;" src="{{this.image}}" alt="Card image cap">
+             <div class="card-body">
+               <h5>{{this.category}}</h5>
+              <p class="card-text">{{this.description}}</p>
+             </div>
+          </div>
+        </div>
+           {{/each}}
+       </div>
+      
+        </div>
+      
+     </section>
+    <!-- ======= Blog Section ======= -->
+    <!-- End Blog Section -->
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>
