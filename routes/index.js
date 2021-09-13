@@ -26,12 +26,7 @@ router.post('/home',function(req,res) {
     res.redirect('home')
   }
   else{
-    if(req.body.name!=user.name){
-      res.render('index',{message1:"check name"})
-    }
-    else if(req.body.password!=password){
-      res.render('index',{message2:"check password"})
-    }
+    res.render('index',{message:"invalid"})
   }
  })
  

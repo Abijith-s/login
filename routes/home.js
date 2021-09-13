@@ -27,7 +27,12 @@ router.get('/', function(req, res, next) {
        //   image : "https://www.moneycrashers.com/wp-content/uploads/2019/02/become-freelancer-types-work.jpg"
        //  }
       ]
-  res.render('home', {cards,name});
+
+      if(!req.session.loggedIn){
+        res.render('index')
+      }else{
+        res.render('home', {cards,name});
+      }
 });
 
 module.exports = router;
